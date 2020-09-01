@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid 19 API in javascript</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="text-center mt-2">Covid 19 Tracker</h3>
+      <h6 class="text-center">The Latest Statistics regarding the "Corona Virus".</h6>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Total Cases</th>
+            <th>Total Deaths</th>
+            <th>Total Recovered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Global</td>
+            <td id="a"></td>
+            <td id="b"></td>
+            <td id="c"></td>
+          </tr>
+          <tr>
+            <td>India</td>
+            <td id="d"></td>
+            <td id="e"></td>
+            <td id="f"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <button id="mybtn" class="btn btn-danger btn-block">
+        Data will be refreshed every 12 hours
+      </button>
+    </div>
+    <footer class="footer text-center">Created by Amarjit Singh | Information provided by <a href="https://covid19api.com/">Johns Hopkins University</a></footer>
+  </body>
+
+
+  <!--script>
+
+    document.getElementById("mybtn").addEventListener("click",refreshData);
+    init();
+
+    function init() {
+      var url = "https://api.covid19api.com/summary";
+
+      var data = "";
+      var dataindia = "";
+      var totalConfirmed = "";
+
+      $.get(url, function (data) {
+        totalConfirmed = data.Countries[76].TotalConfirmed;
+        totalDeaths = data.Countries[76].TotalDeaths;
+        totalRecovered = data.Countries[76].TotalRecovered;
+
+        data = `
+
+        <td>Global</td>
+				<td>${data.Global.TotalConfirmed}</td>
+				<td>${data.Global.TotalDeaths}</td>
+				<td>${data.Global.TotalRecovered}</td>
+
+
+				`;
+
+        $("#data").html(data);
+
+        dataindia = `
+        <td>India</td>
+				<td>${totalConfirmed}</td>
+				<td>${totalDeaths}</td>
+				<td>${totalRecovered}</td>
+
+
+				`;
+
+        $("#data-india").html(dataindia);
+      });
+    }
+    function refreshData() {
+      clearData();
+      init();
+    }
+
+    function clearData() {
+      $("#data").empty();
+      $("#data-india").empty();
+    }
+  </script-->
+</html>
+<!-- ${data.Countries[76].TotalConfirmed}
+${data.Countries[76].TotalDeaths}</t
+${data.Countries[76].TotalRecovered} -->

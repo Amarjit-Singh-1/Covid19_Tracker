@@ -1,0 +1,10 @@
+{
+	"manifest_version": 2,
+	"name":"Covid 19 Tracker",
+	"description":"Just a simple covid 19 tracker for Global and cases across India",
+	"version":"1.0.0",
+	"browser_action":{
+		"default_popup":"index.html"
+	}
+	
+}
